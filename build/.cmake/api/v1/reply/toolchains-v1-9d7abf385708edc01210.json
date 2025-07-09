@@ -5,22 +5,25 @@
 		{
 			"compiler" : 
 			{
-				"id" : "GNU",
+				"id" : "Clang",
 				"implicit" : 
 				{
 					"includeDirectories" : 
 					[
-						"/usr/lib/gcc/x86_64-linux-gnu/11/include",
 						"/usr/local/include",
+						"/usr/lib/llvm-10/lib/clang/10.0.0/include",
 						"/usr/include/x86_64-linux-gnu",
 						"/usr/include"
 					],
 					"linkDirectories" : 
 					[
-						"/usr/lib/gcc/x86_64-linux-gnu/11",
+						"/usr/lib/gcc/x86_64-linux-gnu/13",
 						"/usr/lib/x86_64-linux-gnu",
-						"/usr/lib",
+						"/usr/lib64",
 						"/lib/x86_64-linux-gnu",
+						"/lib64",
+						"/usr/lib",
+						"/usr/lib/llvm-10/lib",
 						"/lib"
 					],
 					"linkFrameworkDirectories" : [],
@@ -33,8 +36,8 @@
 						"gcc_s"
 					]
 				},
-				"path" : "/usr/bin/gcc-11",
-				"version" : "11.4.0"
+				"path" : "/usr/bin/clang-10",
+				"version" : "10.0.0"
 			},
 			"language" : "C",
 			"sourceFileExtensions" : 
@@ -46,25 +49,28 @@
 		{
 			"compiler" : 
 			{
-				"id" : "GNU",
+				"id" : "Clang",
 				"implicit" : 
 				{
 					"includeDirectories" : 
 					[
-						"/usr/include/c++/11",
-						"/usr/include/x86_64-linux-gnu/c++/11",
-						"/usr/include/c++/11/backward",
-						"/usr/lib/gcc/x86_64-linux-gnu/11/include",
+						"/usr/include/c++/13",
+						"/usr/include/x86_64-linux-gnu/c++/13",
+						"/usr/include/c++/13/backward",
 						"/usr/local/include",
+						"/usr/lib/llvm-10/lib/clang/10.0.0/include",
 						"/usr/include/x86_64-linux-gnu",
 						"/usr/include"
 					],
 					"linkDirectories" : 
 					[
-						"/usr/lib/gcc/x86_64-linux-gnu/11",
+						"/usr/lib/gcc/x86_64-linux-gnu/13",
 						"/usr/lib/x86_64-linux-gnu",
-						"/usr/lib",
+						"/usr/lib64",
 						"/lib/x86_64-linux-gnu",
+						"/lib64",
+						"/usr/lib",
+						"/usr/lib/llvm-10/lib",
 						"/lib"
 					],
 					"linkFrameworkDirectories" : [],
@@ -79,8 +85,8 @@
 						"gcc"
 					]
 				},
-				"path" : "/usr/bin/g++-11",
-				"version" : "11.4.0"
+				"path" : "/usr/bin/clang++-10",
+				"version" : "10.0.0"
 			},
 			"language" : "CXX",
 			"sourceFileExtensions" : 

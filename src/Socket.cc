@@ -30,7 +30,7 @@ int Socket::accept(InetAddress *peeraddr)
     */
     sockaddr_in addr;
     socklen_t len = sizeof(addr);
-    ::memset(&addr, len, 0);
+    ::memset(&addr, 0, len);
     // fixed : int connfd = ::accept(sockfd_, (sockaddr * )&addr, &len);
     int connfd = ::accept4(sockfd_, (sockaddr *)&addr, &len, SOCK_NONBLOCK | SOCK_CLOEXEC);
     if(connfd >= 0)

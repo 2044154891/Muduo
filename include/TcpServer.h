@@ -4,7 +4,7 @@
 #include <atomic>
 #include <unordered_map>
 
-//用户使用muduo编写服务器程序，为了方便用户的使用，把所有的头文件包含
+// 一站式包含muduo所有常用头文件，用户只需包含TcpServer.h即可
 #include "EventLoop.h"
 #include "Acceptor.h"
 #include "TcpConnection.h"
@@ -14,6 +14,14 @@
 #include "Buffer.h"
 #include "Logger.h"
 #include "EventLoopThreadPool.h"
+#include "EventLoopThread.h"
+#include "Channel.h"
+#include "Poller.h"
+#include "Socket.h"
+#include "Thread.h"
+#include "Timestamp.h"
+#include "CurrentThread.h"
+#include "EPollPoller.h"
 
 //对外的服务器编程使用的类
 class TcpServer : noncopyable

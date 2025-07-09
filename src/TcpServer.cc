@@ -72,7 +72,7 @@ void TcpServer::newConnection(int sockfd, const InetAddress &peerAddr)
     sockaddr_in local;
     ::memset(&local, 0 ,sizeof(local));
     socklen_t addrlen = sizeof(local);
-    ::memset(&addrlen, 0, sizeof(local));
+    ::memset(&addrlen, 0, sizeof(addrlen));
     if(::getsockname(sockfd, (sockaddr *)&local, &addrlen) < 0)
     {
         LOG_ERROR("sockets::getLocalAddr\n");
@@ -87,7 +87,10 @@ void TcpServer::newConnection(int sockfd, const InetAddress &peerAddr)
     ));
     connections_[connName] = conn;
 
-    //下面的回调都是用户设置给Tcpserver => TcpConnection 至于Channel绑定的是TcpConnection设置的四个回调函数
+    // 关键：把用户设置的回调传递给TcpConnection
+    conn->setConnectionCallback(connectionCallback_);
+    conn->setMessageCallback(messageCallback_);
+    conn->setWriteCompleteCallback(writeCompleteCallback_);
     conn->setCloseCallback(std::bind(&TcpServer::removeConnection, this, std::placeholders::_1));
 
     ioLoop->runInLoop(std::bind(&TcpConnection::connectEstablished, conn));

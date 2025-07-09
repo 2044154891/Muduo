@@ -15,7 +15,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/addr2line"
+			"value" : "/usr/bin/llvm-addr2line-10"
 		},
 		{
 			"name" : "CMAKE_AR",
@@ -31,7 +31,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/ar"
+			"value" : "/usr/bin/llvm-ar-10"
 		},
 		{
 			"name" : "CMAKE_BUILD_TYPE",
@@ -155,11 +155,11 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "CXX compiler"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "STRING",
-			"value" : "/usr/bin/g++-11"
+			"type" : "FILEPATH",
+			"value" : "/usr/bin/clang++-10"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_AR",
@@ -171,11 +171,27 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+					"value" : "LLVM archiver"
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/gcc-ar-11"
+			"value" : "/usr/bin/llvm-ar-10"
+		},
+		{
+			"name" : "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "`clang-scan-deps` dependency scanner"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_RANLIB",
@@ -187,11 +203,11 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+					"value" : "Generate index for LLVM archive"
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/gcc-ranlib-11"
+			"value" : "/usr/bin/llvm-ranlib-10"
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS",
@@ -283,11 +299,11 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "C compiler"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "STRING",
-			"value" : "/usr/bin/gcc-11"
+			"type" : "FILEPATH",
+			"value" : "/usr/bin/clang-10"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_AR",
@@ -299,11 +315,27 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+					"value" : "LLVM archiver"
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/gcc-ar-11"
+			"value" : "/usr/bin/llvm-ar-10"
+		},
+		{
+			"name" : "CMAKE_C_COMPILER_CLANG_SCAN_DEPS",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "`clang-scan-deps` dependency scanner"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "CMAKE_C_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_RANLIB",
@@ -315,11 +347,11 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+					"value" : "Generate index for LLVM archive"
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/gcc-ranlib-11"
+			"value" : "/usr/bin/llvm-ranlib-10"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS",
@@ -415,7 +447,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "CMAKE_DLLTOOL-NOTFOUND"
+			"value" : "/usr/bin/llvm-dlltool-10"
 		},
 		{
 			"name" : "CMAKE_EXECUTABLE_FORMAT",
@@ -513,6 +545,10 @@
 			"name" : "CMAKE_EXPORT_COMPILE_COMMANDS",
 			"properties" : 
 			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
 				{
 					"name" : "HELPSTRING",
 					"value" : "No help, variable specified on the command line."
@@ -755,7 +791,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/nm"
+			"value" : "/usr/bin/llvm-nm-10"
 		},
 		{
 			"name" : "CMAKE_NUMBER_OF_MAKEFILES",
@@ -783,7 +819,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/objcopy"
+			"value" : "/usr/bin/llvm-objcopy-10"
 		},
 		{
 			"name" : "CMAKE_OBJDUMP",
@@ -799,7 +835,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/objdump"
+			"value" : "/usr/bin/llvm-objdump-10"
 		},
 		{
 			"name" : "CMAKE_PLATFORM_INFO_INITIALIZED",
@@ -863,7 +899,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/ranlib"
+			"value" : "/usr/bin/llvm-ranlib-10"
 		},
 		{
 			"name" : "CMAKE_READELF",
@@ -879,7 +915,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/readelf"
+			"value" : "/usr/bin/llvm-readelf-10"
 		},
 		{
 			"name" : "CMAKE_ROOT",
