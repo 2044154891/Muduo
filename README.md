@@ -22,7 +22,7 @@ Muduo 是一个高性能、易用的 C++ 网络库，支持多线程 Reactor 模
 
 1. **克隆项目**
    ```bash
-   git clone <你的仓库地址> Muduo
+   git clone https://github.com/2044154891/Muduo.git Muduo
    cd Muduo
    ```
 
@@ -97,4 +97,4 @@ Muduo 是一个高性能、易用的 C++ 网络库，支持多线程 Reactor 模
 
 ---
 
-如有问题欢迎提 issue 或联系作者！ 
+如有问题欢迎提 issue 或联系作者2044154891！ 
